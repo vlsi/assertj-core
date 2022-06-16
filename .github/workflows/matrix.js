@@ -32,10 +32,10 @@ matrix.addAxis({
   // Strings allow versions like 18-ea
   values: [
     // allow slightly more room for 17
-    '17',
+/*    '17',
     '17',
     '18',
-    '19',
+    '19',*/
     '20',
   ]
 });
@@ -73,20 +73,21 @@ matrix.addAxis({
 matrix.addAxis({
   name: 'hash',
   values: [
-    {value: 'regular', title: '', weight: 42},
+//    {value: 'regular', title: '', weight: 42},
 // TODO: javac fails to compile assertj code with hash==same, so skip this parameter
 //       This should be re-enabled once we have different Java for build and Java for tests.
-//    {value: 'same', title: 'same hashcode', weight: 1}
+    {value: 'same', title: 'same hashcode', weight: 1}
   ]
 });
 matrix.addAxis({
   name: 'locale',
   title: x => x.language + '_' + x.country,
   values: [
-    {language: 'de', country: 'DE'},
+    {language: 'en', country: 'US'},
+/*    {language: 'de', country: 'DE'},
     {language: 'fr', country: 'FR'},
     {language: 'ru', country: 'RU'},
-    {language: 'tr', country: 'TR'},
+    {language: 'tr', country: 'TR'},*/
   ]
 });
 
